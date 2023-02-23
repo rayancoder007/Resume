@@ -24,7 +24,5 @@ else:
 x3 = x1 + x2 + h
 print("The final result of addition is : ",x3)
 
-# Ending with the code
-
-
+# Ending with the Program with user inputs
     
