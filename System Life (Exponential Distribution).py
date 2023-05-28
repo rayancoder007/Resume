@@ -3,7 +3,7 @@
 # Rayan Chowdhury
 # Nimit Singhal
 # Saptarshi Roy
-
+ 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -59,7 +59,7 @@ for i in range(1, N+1):
             cold_standby_2 = np.random.exponential(scale=1, size=n)
             t = (np.minimum(cold_standby, np.maximum(cold_standby_2, X3-X1)) + X1) + np.minimum(cold_standby_2, cold_standby)
         else:
-            t = np.minimum(X1-X3, np.maximum(cold_standby, cold_standby)) + X3
+            t = np.minimum(X1-X3, np.maximum(cold_standby, cold_standby_2)) + X3
     else:
         second_fail = np.minimum(X1, X2)
         if np.array_equal(second_fail, X1):

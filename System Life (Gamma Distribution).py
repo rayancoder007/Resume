@@ -55,13 +55,13 @@ for i in range(1, N+1):
         if np.array_equal(second_fail, X1):
             t = (np.minimum(cold_standby, np.maximum(cold_standby_2, X3-X1)) + X1) + np.minimum(cold_standby_2, cold_standby)
         else:
-            t = np.minimum(X1-X3, np.maximum(cold_standby, cold_standby)) + X3
+            t = np.minimum(X1-X3, np.maximum(cold_standby, cold_standby_2)) + X3
     else:
         second_fail = np.minimum(X1, X2)
         if np.array_equal(second_fail, X1):
             t = (np.minimum(cold_standby, np.maximum(cold_standby_2, X2-X1)) + X1) + np.minimum(cold_standby_2, cold_standby)
         else:
-            t = np.minimum(X1-X2, np.maximum(cold_standby, cold_standby)) + X2
+            t = np.minimum(X1-X2, np.maximum(cold_standby, cold_standby_2)) + X2
     
     t_array_renew.append(t)
 
